@@ -20,7 +20,7 @@ public class StringAlgorithms {
 				j++;
 			}
 			if(j == patternLength)
-				return i;
+				return i; 
 		}
 		
 		return -1;
