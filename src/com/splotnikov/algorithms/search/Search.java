@@ -27,8 +27,7 @@ public class Search {
 	
 	public int binary(int[] values, int key){
 		
-		int hi = values.length;
-		int lo = 0;
+		int hi = values.length, lo = 0;
 		
 		while (lo < hi) {
 			int mid = (hi + lo) / 2;

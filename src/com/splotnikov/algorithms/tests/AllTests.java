@@ -7,7 +7,8 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses(
 		{ SearchFindMatchParameterized.class, 
-		  SearchBinaryParameterized.class 
+		  SearchBinaryParameterized.class,
+		  QuickSortTests.class
 		  })
 public class AllTests {
 
