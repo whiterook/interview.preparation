@@ -4,16 +4,14 @@ import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.Collection;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-
 import com.splotnikov.algorithms.search.Search;
 
 @RunWith(Parameterized.class)
-public class SearchFindMatchParameterized {
+public class SearchFindMatchTests {
 
 	
 	 @Parameters(name = "{index}: findMatch({0}, {1}) expected={2}")
@@ -30,7 +28,7 @@ public class SearchFindMatchParameterized {
 	private String text;
 	private int expected;
 	 
-	public SearchFindMatchParameterized(String pattern, String text, 
+	public SearchFindMatchTests(String pattern, String text, 
 			int expected) {
 		this.pattern = pattern;
 		this.text = text;

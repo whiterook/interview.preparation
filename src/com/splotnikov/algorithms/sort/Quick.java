@@ -4,32 +4,32 @@ import com.splotnikov.utils.Utils;
 public class Quick {
 
 	
-	public static void sort(Comparable[] theArray){
-		sort(theArray, 0, theArray.length - 1);
+	public static <T extends Comparable<T>> void sort(T[] values){
+		sort(values, 0, values.length - 1);
 	}
 	
-	private static void sort(Comparable[] theArray, int lo, int hi){
+	private static <T extends Comparable<T>> void sort(T[] values, int lo, int hi){
 		if(lo >= hi) 
 			return;
-		int pivotIndex = portion(theArray, lo, hi);
-		sort(theArray, lo, pivotIndex - 1);
-		sort(theArray, pivotIndex + 1, hi);		
+		int pivotIndex = portion(values, lo, hi);
+		sort(values, lo, pivotIndex - 1);
+		sort(values, pivotIndex + 1, hi);		
 	}
 	
 	
-	private static int portion(Comparable[] theArray, int lo, int hi){
-		Comparable pivot = theArray[lo];
+	private static <T extends Comparable<T>> int portion(T[] values, int lo, int hi){
+		T pivot = values[lo];
 		int i = lo;
 		int j = hi + 1;
 		while(true){
-			while(Utils.less(theArray[++i], pivot) && (i < hi))
+			while(Utils.less(values[++i], pivot) && (i < hi))
 				;
-			while(Utils.less(pivot, theArray[--j]) && (j > lo))
+			while(Utils.less(pivot, values[--j]) && (j > lo))
 				;
 			if(i >= j) break;
-			Utils.swap(theArray, i, j);
+			Utils.swap(values, i, j);
 		}
-		Utils.swap(theArray, lo, j);
+		Utils.swap(values, lo, j);
 		return j;
 	}
 	

@@ -5,11 +5,8 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses(
-		{ SearchFindMatchParameterized.class, 
-		  SearchBinaryParameterized.class,
-		  QuickSortTests.class
-		  })
+@SuiteClasses({ SearchFindMatchTests.class, SearchBinaryTests.class,
+		SortsTests.class })
 public class AllTests {
 
 }

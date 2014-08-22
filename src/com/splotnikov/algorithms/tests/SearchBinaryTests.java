@@ -12,7 +12,7 @@ import org.junit.runners.Parameterized.Parameters;
 import com.splotnikov.algorithms.search.Search;
 
 @RunWith(Parameterized.class)
-public class SearchBinaryParameterized {
+public class SearchBinaryTests {
 
 	 @Parameters(name = "{index}: binary({0}, {1}) expected={2}")
 	 public static Collection<Object[]> data() {
@@ -30,7 +30,7 @@ public class SearchBinaryParameterized {
 	 private int key;
 	 private int expected;
 	 
-	 public SearchBinaryParameterized(int[] values, int key, int expected){
+	 public SearchBinaryTests(int[] values, int key, int expected){
 		 this.values = values;
 		 this.key = key;
 		 this.expected = expected;
