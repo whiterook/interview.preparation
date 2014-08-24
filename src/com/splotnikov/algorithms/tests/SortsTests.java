@@ -11,6 +11,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import com.splotnikov.algorithms.sort.Insertion;
+import com.splotnikov.algorithms.sort.Merge;
 import com.splotnikov.algorithms.sort.Quick;
 import com.splotnikov.utils.Utils;
 
@@ -23,8 +24,8 @@ public class SortsTests {
 	 public static Collection<Object[]> data() {
 	        return Arrays.asList(new Object[][] {
 	                 { new Integer[] {6, 10, 13, 5, 8, 3, 2, 11}},	                 
-	                 { new Integer[] {1, 2, 7, 8, 8, 10, 12, 15}},
-	                 { new Integer[] {21, 2, 7, 8, 8, 10, 12, 21}}
+	                 //{ new Integer[] {1, 2, 7, 8, 8, 10, 12, 15}},
+	                 //{ new Integer[] {21, 2, 7, 8, 8, 10, 12, 21}}
 	           });
 	    }
 	
@@ -46,4 +47,11 @@ public class SortsTests {
 		assertEquals("Result", true, isSorted);
 	}
 	
+	@Test
+	public void mergeSortTest(){
+		Utils.shuffle(values);
+		Merge.sort(values);
+		boolean isSorted = Utils.isSorted(values);
+		assertEquals("Result", true, isSorted);
+	}
 }

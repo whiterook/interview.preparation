@@ -1,7 +1,20 @@
 package com.splotnikov.utils;
 
+import java.util.Random;
+
 
 public class Utils {
+	
+	private static Random random; 
+	private static long seed; 
+	
+	 static {
+	        // this is how the seed was set in Java 1.4
+	        seed = System.currentTimeMillis();
+	        random = new Random(seed);
+	    }
+	 
+	private Utils() {}
 	
 	public static Integer[] generateIntArray(int size){
 		Integer[] values = new Integer[size];	
@@ -12,6 +25,21 @@ public class Utils {
 		return values;
 	}
 	
+	 public static void shuffle(Integer[] a) {
+	        int N = a.length;
+	        for (int i = 0; i < N; i++) {
+	            int r = i + uniform(N-i);     // between i and N-1
+	            int temp = a[i];
+	            a[i] = a[r];
+	            a[r] = temp;
+	        }
+	 }
+	 
+	 public static int uniform(int N) {
+	        if (N <= 0) throw new IllegalArgumentException("Parameter N must be positive");
+	        return random.nextInt(N);
+	    }
+	
 	public static <T extends Comparable<T>> void swap(T[] values, int i, int j){
 		T temp = values[i];
 		values[i] = values[j];
@@ -21,6 +49,7 @@ public class Utils {
 	public static <T extends Comparable<T>> boolean less(T left, T right) {
         return (left.compareTo(right) < 0);
     }
+	
 	
 	public static <T extends Comparable<T>> boolean isSorted(T[] values) {
 	        return isSorted(values, 0, values.length - 1);
