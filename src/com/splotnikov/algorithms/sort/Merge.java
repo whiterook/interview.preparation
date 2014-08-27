@@ -13,7 +13,7 @@ public class Merge {
 		if(lo >= hi){
 			return;
 		}		
-		int mid = (hi - lo) / 2;
+		int mid = lo + (hi - lo)/2;
 		sort(values, aux, lo, mid);
 		sort(values, aux, mid + 1, hi);
 		merge(values, aux, lo, mid, hi);		
@@ -23,17 +23,17 @@ public class Merge {
 		for (int i = lo; i <= hi; i++) {
 			aux[i] = values[i];
 		}		
-		int i = lo, j = mid;
+		int i = lo, j = mid+1;
 		for (int k = lo; k <= hi; k++) {
 			if(i > mid)
 				values[k] = aux[j++];
-			if(j > hi)
+			else if(j > hi)
 				values[k] = aux[i++];
-			if(Utils.less(aux[i], aux[j])){
-				values[k] = aux[i++];
+			else if(Utils.less(aux[j], aux[i])){
+				values[k] = aux[j++];				
 			}
 			else{
-				values[k] = aux[j++];
+				values[k] = aux[i++];
 			}
 		}
 	}

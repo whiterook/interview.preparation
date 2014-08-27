@@ -60,4 +60,11 @@ public class Utils {
 	            if (less(values[i], values[i-1])) return false;
 	        return true;
 	    }
+	
+	public static <T extends Comparable<T>> void printArray(T[] values){
+		for (T t : values) {
+			System.out.print(" " + t.toString());
+		}
+		System.out.println();
+	}
 }

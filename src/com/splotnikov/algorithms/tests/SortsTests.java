@@ -35,6 +35,7 @@ public class SortsTests {
 	 
 	@Test
 	public void quickSortTest(){
+		Utils.shuffle(values);
 		Quick.sort(values);
 		boolean isSorted = Utils.isSorted(values);
 		assertEquals("Result", true, isSorted);
@@ -42,6 +43,7 @@ public class SortsTests {
 	
 	@Test
 	public void insertionSortTest(){
+		Utils.shuffle(values);
 		Insertion.sort(values);
 		boolean isSorted = Utils.isSorted(values);
 		assertEquals("Result", true, isSorted);
@@ -50,8 +52,11 @@ public class SortsTests {
 	@Test
 	public void mergeSortTest(){
 		Utils.shuffle(values);
+		Utils.printArray(values);
 		Merge.sort(values);
+		Utils.printArray(values);
 		boolean isSorted = Utils.isSorted(values);
 		assertEquals("Result", true, isSorted);
 	}
+	
 }
