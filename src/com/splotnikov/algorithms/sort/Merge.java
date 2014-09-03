@@ -1,15 +1,18 @@
 package com.splotnikov.algorithms.sort;
 
+import java.lang.reflect.Array;
+
 import com.splotnikov.utils.Utils;
 
 public class Merge {
 
-	public static void sort(Comparable[] values) {
-		Comparable[] aux = new Comparable[values.length];
+	public static <T extends Comparable<T>> void sort(T[] values) {
+		@SuppressWarnings("unchecked")
+		T[] aux = (T[]) Array.newInstance(values.getClass().getComponentType(), values.length);
 		sort(values, aux, 0, values.length - 1);
 	}
 	
-	private static void sort(Comparable[] values, Comparable[] aux, int lo, int hi){
+	private static <T extends Comparable<T>> void sort(T[] values, T[] aux, int lo, int hi){
 		if(lo >= hi){
 			return;
 		}		
@@ -19,7 +22,7 @@ public class Merge {
 		merge(values, aux, lo, mid, hi);		
 	}
 	
-	private static void merge(Comparable[] values, Comparable[] aux, int lo, int mid, int hi){
+	private static <T extends Comparable<T>> void merge(T[] values, T[] aux, int lo, int mid, int hi){
 		for (int i = lo; i <= hi; i++) {
 			aux[i] = values[i];
 		}		

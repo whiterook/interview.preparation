@@ -24,8 +24,8 @@ public class SortsTests {
 	 public static Collection<Object[]> data() {
 	        return Arrays.asList(new Object[][] {
 	                 { new Integer[] {6, 10, 13, 5, 8, 3, 2, 11}},	                 
-	                 //{ new Integer[] {1, 2, 7, 8, 8, 10, 12, 15}},
-	                 //{ new Integer[] {21, 2, 7, 8, 8, 10, 12, 21}}
+	                 { new Integer[] {1, 2, 7, 8, 8, 10, 12, 15}},
+	                 { new Integer[] {21, 2, 7, 8, 8, 10, 12, 21}}
 	           });
 	    }
 	
