@@ -63,4 +63,20 @@ public class BinaryTree {
 			inOrderTreverseTree(node.getRightChild());
 		}
 	}
+	
+	public void preOrderTreverseTree(Node node){
+		if(node != null){
+			System.out.println(node);
+			preOrderTreverseTree(node.getLeftChild());
+			preOrderTreverseTree(node.getRightChild());
+		}
+	}
+	
+	public void postOrderTreverseTree(Node node){
+		if(node != null){
+			postOrderTreverseTree(node.getLeftChild());
+			postOrderTreverseTree(node.getRightChild());
+			System.out.println(node);
+		}
+	}
 }
