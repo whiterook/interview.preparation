@@ -6,7 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ SearchFindMatchTests.class, SearchBinaryTests.class,
-		SortsTests.class })
+		SortsTests.class, PairsTests.class })
 public class AllTests {
 
 }
