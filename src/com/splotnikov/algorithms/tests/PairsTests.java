@@ -8,27 +8,6 @@ import com.splotnikov.algorithms.puzzles.pairs.Tree;
 public class PairsTests {
 
 	private Tree tree;
-
-	/*
-	Animal, Dog
-	Animal, Cat
-	Bird, Parrot
-	Plant, Tree
-	Plant, Grass
-	Animal, Bird
-	Lifeform, Plant
-	Lifeform, Animal
-	
-	Lifeform
-	Animal
-		Dog
-		Cat
-		Bird
-			Parrot
-	Plant
-		Tree
-		Grass	
-	*/
 	
 	private void fillTree(){
 		tree = new Tree();
