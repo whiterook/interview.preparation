@@ -1,4 +1,4 @@
-package com.splotnikov.utils;
+package lib;
 
 import java.util.Random;
 

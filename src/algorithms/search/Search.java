@@ -1,4 +1,4 @@
-package com.splotnikov.algorithms.search;
+package algorithms.search;
 
 import java.security.InvalidParameterException;
 

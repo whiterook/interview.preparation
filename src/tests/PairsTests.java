@@ -1,9 +1,9 @@
-package com.splotnikov.algorithms.tests;
+package tests;
 
 import org.junit.Test;
 
-import com.splotnikov.algorithms.puzzles.pairs.Node;
-import com.splotnikov.algorithms.puzzles.pairs.Tree;
+import puzzles.pairs.Node;
+import puzzles.pairs.Tree;
 
 public class PairsTests {
 

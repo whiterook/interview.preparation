@@ -1,4 +1,4 @@
-package com.splotnikov.algorithms.tests;
+package tests;
 import static org.junit.Assert.*;
 
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import com.splotnikov.algorithms.search.Search;
+import algorithms.search.Search;
 
 @RunWith(Parameterized.class)
 public class SearchBinaryTests {

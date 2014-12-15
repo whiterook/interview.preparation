@@ -1,4 +1,4 @@
-package com.splotnikov.algorithms.puzzles.pairs;
+package puzzles.pairs;
 
 import java.util.ArrayList;
 

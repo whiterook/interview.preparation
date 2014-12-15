@@ -1,4 +1,4 @@
-package com.splotnikov.algorithms.tests;
+package tests;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,10 +10,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import com.splotnikov.algorithms.sort.Insertion;
-import com.splotnikov.algorithms.sort.Merge;
-import com.splotnikov.algorithms.sort.Quick;
-import com.splotnikov.utils.Utils;
+import algorithms.sort.Insertion;
+import algorithms.sort.Merge;
+import algorithms.sort.Quick;
+import lib.Utils;
 
 @RunWith(Parameterized.class)
 public class SortsTests {

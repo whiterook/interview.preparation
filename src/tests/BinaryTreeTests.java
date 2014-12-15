@@ -1,8 +1,8 @@
-package com.splotnikov.algorithms.tests;
+package tests;
 
 import org.junit.Test;
 
-import com.splotnikov.algorithms.binarytree.BinaryTree;
+import algorithms.binarytree.BinaryTree;
 
 public class BinaryTreeTests {
 

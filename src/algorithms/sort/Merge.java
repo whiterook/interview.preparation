@@ -1,8 +1,8 @@
-package com.splotnikov.algorithms.sort;
+package algorithms.sort;
 
 import java.lang.reflect.Array;
 
-import com.splotnikov.utils.Utils;
+import lib.Utils;
 
 public class Merge {
 

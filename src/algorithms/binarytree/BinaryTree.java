@@ -1,4 +1,4 @@
-package com.splotnikov.algorithms.binarytree;
+package algorithms.binarytree;
 
 public class BinaryTree {
 

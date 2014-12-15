@@ -1,6 +1,6 @@
-package com.splotnikov.algorithms.sort;
+package algorithms.sort;
 
-import com.splotnikov.utils.Utils;
+import lib.Utils;
 
 public class Insertion {
 

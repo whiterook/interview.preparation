@@ -1,5 +1,5 @@
-package com.splotnikov.algorithms.sort;
-import com.splotnikov.utils.Utils;
+package algorithms.sort;
+import lib.Utils;
 
 public class Quick {
 
