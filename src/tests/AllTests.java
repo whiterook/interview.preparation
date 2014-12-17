@@ -5,8 +5,13 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ SearchFindMatchTests.class, SearchBinaryTests.class,
-		SortsTests.class, PairsTests.class })
+@SuiteClasses({ 
+	SearchFindMatchTests.class, 
+	SearchBinaryTests.class,
+	SortsTests.class, 
+	PairsTests.class,
+	PermutationTests.class})
+
 public class AllTests {
 
 }
